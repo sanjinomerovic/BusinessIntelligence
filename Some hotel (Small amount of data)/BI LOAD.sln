@@ -1,0 +1,71 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "BI LOAD", "BI LOAD\BI LOAD.dtproj", "{3239EA26-98C0-49CF-AEB5-7CD6F1C1E5F2}"
+EndProject
+Project("{6870E480-7721-4708-BFB8-9AE898AA21B3}") = "BI TABULAR", "BI TABULAR\BI TABULAR.smproj", "{8CE414BB-95B2-4C99-9E03-51BA72086E22}"
+EndProject
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "BI_REPORT", "BI_REPORT\BI_REPORT.rptproj", "{AC34A47B-C5F7-498A-8CBA-4C79EC165E8A}"
+EndProject
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "DataMining", "DataMining\DataMining.dwproj", "{38CC331F-6F0D-4D15-B948-7F83AEFFD94E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		DebugLocal|x86 = DebugLocal|x86
+		Development|x86 = Development|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3239EA26-98C0-49CF-AEB5-7CD6F1C1E5F2}.Debug|x86.ActiveCfg = Development
+		{3239EA26-98C0-49CF-AEB5-7CD6F1C1E5F2}.Debug|x86.Build.0 = Development
+		{3239EA26-98C0-49CF-AEB5-7CD6F1C1E5F2}.DebugLocal|x86.ActiveCfg = Development
+		{3239EA26-98C0-49CF-AEB5-7CD6F1C1E5F2}.DebugLocal|x86.Build.0 = Development
+		{3239EA26-98C0-49CF-AEB5-7CD6F1C1E5F2}.Development|x86.ActiveCfg = Development
+		{3239EA26-98C0-49CF-AEB5-7CD6F1C1E5F2}.Development|x86.Build.0 = Development
+		{3239EA26-98C0-49CF-AEB5-7CD6F1C1E5F2}.Release|x86.ActiveCfg = Development
+		{3239EA26-98C0-49CF-AEB5-7CD6F1C1E5F2}.Release|x86.Build.0 = Development
+		{8CE414BB-95B2-4C99-9E03-51BA72086E22}.Debug|x86.ActiveCfg = Development|x86
+		{8CE414BB-95B2-4C99-9E03-51BA72086E22}.Debug|x86.Build.0 = Development|x86
+		{8CE414BB-95B2-4C99-9E03-51BA72086E22}.Debug|x86.Deploy.0 = Development|x86
+		{8CE414BB-95B2-4C99-9E03-51BA72086E22}.DebugLocal|x86.ActiveCfg = Development|x86
+		{8CE414BB-95B2-4C99-9E03-51BA72086E22}.DebugLocal|x86.Build.0 = Development|x86
+		{8CE414BB-95B2-4C99-9E03-51BA72086E22}.DebugLocal|x86.Deploy.0 = Development|x86
+		{8CE414BB-95B2-4C99-9E03-51BA72086E22}.Development|x86.ActiveCfg = Development|x86
+		{8CE414BB-95B2-4C99-9E03-51BA72086E22}.Development|x86.Build.0 = Development|x86
+		{8CE414BB-95B2-4C99-9E03-51BA72086E22}.Development|x86.Deploy.0 = Development|x86
+		{8CE414BB-95B2-4C99-9E03-51BA72086E22}.Release|x86.ActiveCfg = Development|x86
+		{8CE414BB-95B2-4C99-9E03-51BA72086E22}.Release|x86.Build.0 = Development|x86
+		{8CE414BB-95B2-4C99-9E03-51BA72086E22}.Release|x86.Deploy.0 = Development|x86
+		{AC34A47B-C5F7-498A-8CBA-4C79EC165E8A}.Debug|x86.ActiveCfg = Debug
+		{AC34A47B-C5F7-498A-8CBA-4C79EC165E8A}.Debug|x86.Build.0 = Debug
+		{AC34A47B-C5F7-498A-8CBA-4C79EC165E8A}.Debug|x86.Deploy.0 = Debug
+		{AC34A47B-C5F7-498A-8CBA-4C79EC165E8A}.DebugLocal|x86.ActiveCfg = DebugLocal
+		{AC34A47B-C5F7-498A-8CBA-4C79EC165E8A}.DebugLocal|x86.Build.0 = DebugLocal
+		{AC34A47B-C5F7-498A-8CBA-4C79EC165E8A}.Development|x86.ActiveCfg = DebugLocal
+		{AC34A47B-C5F7-498A-8CBA-4C79EC165E8A}.Development|x86.Build.0 = DebugLocal
+		{AC34A47B-C5F7-498A-8CBA-4C79EC165E8A}.Release|x86.ActiveCfg = Release
+		{AC34A47B-C5F7-498A-8CBA-4C79EC165E8A}.Release|x86.Build.0 = Release
+		{AC34A47B-C5F7-498A-8CBA-4C79EC165E8A}.Release|x86.Deploy.0 = Release
+		{38CC331F-6F0D-4D15-B948-7F83AEFFD94E}.Debug|x86.ActiveCfg = Development
+		{38CC331F-6F0D-4D15-B948-7F83AEFFD94E}.Debug|x86.Build.0 = Development
+		{38CC331F-6F0D-4D15-B948-7F83AEFFD94E}.Debug|x86.Deploy.0 = Development
+		{38CC331F-6F0D-4D15-B948-7F83AEFFD94E}.DebugLocal|x86.ActiveCfg = Development
+		{38CC331F-6F0D-4D15-B948-7F83AEFFD94E}.DebugLocal|x86.Build.0 = Development
+		{38CC331F-6F0D-4D15-B948-7F83AEFFD94E}.DebugLocal|x86.Deploy.0 = Development
+		{38CC331F-6F0D-4D15-B948-7F83AEFFD94E}.Development|x86.ActiveCfg = Development
+		{38CC331F-6F0D-4D15-B948-7F83AEFFD94E}.Development|x86.Build.0 = Development
+		{38CC331F-6F0D-4D15-B948-7F83AEFFD94E}.Development|x86.Deploy.0 = Development
+		{38CC331F-6F0D-4D15-B948-7F83AEFFD94E}.Release|x86.ActiveCfg = Development
+		{38CC331F-6F0D-4D15-B948-7F83AEFFD94E}.Release|x86.Build.0 = Development
+		{38CC331F-6F0D-4D15-B948-7F83AEFFD94E}.Release|x86.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {97F34286-653B-4F18-A512-71AF6D423E34}
+	EndGlobalSection
+EndGlobal

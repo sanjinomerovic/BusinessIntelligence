@@ -1,0 +1,96 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>Bi_Cube</Database>
+    <Server>localhost</Server>
+    <ConnectionString>Data Source=localhost;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>DoNotProcess</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>7xUzKRvRJ+SBkvx0C/oZMiyXEfQ=14/11/2017 13:10:4007/12/2017 11:02:00</TimeStamp>
+        <ID>
+          <String>BIDWsource</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>o407JoA12qxHH4OwL5/Ktv9Dl2c=14/11/2017 13:11:1507/12/2017 11:02:01</TimeStamp>
+        <ID>
+          <String>BIDW_view</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>e5mnnvihn6FE+ISmp/SaQffTK/M=14/11/2017 13:26:0207/12/2017 11:02:01</TimeStamp>
+        <ID>
+          <String>Dim Lokacije</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>Hmoit9ZbvYSTLZBzsax0MRnuijk=14/11/2017 13:28:4507/12/2017 11:02:01</TimeStamp>
+        <ID>
+          <String>Dim Klijenti</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>S5yYrnUmbO8shdrIRRdrRp6kAMc=14/11/2017 13:37:4807/12/2017 11:02:01</TimeStamp>
+        <ID>
+          <String>Dim Sobe</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>8reTlJa+37GCdFGq+l0CGkzmzBA=14/11/2017 13:41:4207/12/2017 11:02:01</TimeStamp>
+        <ID>
+          <String>Dim Vrijeme</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>ouQ/h1XiIJusSgUbAjWTseTZ+mM=14/11/2017 13:43:2507/12/2017 11:02:01</TimeStamp>
+        <ID>
+          <String>Dim Usluge</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>BEoQ/WQ9eQJlmx9PFNLw02Qu7f0=14/11/2017 13:45:1807/12/2017 11:02:01</TimeStamp>
+        <ID>
+          <String>Dim Uposlenik</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>b+jp9f0tu0dWf5xWf8A/wO4D/ro=15/12/2017 10:24:5807/12/2017 11:02:01wz9uMJzj1Dy4eOF9YOwlneQFEoA=14/11/2017 13:49:1707/12/2017 11:02:01</TimeStamp>
+        <ID>
+          <String>BIDW_cube</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>IvuTZ6W+gDSb7JAVPiA22oXdze0=14/11/2017 12:58:3607/12/2017 11:02:01</TimeStamp>
+      <ID>
+        <String>Bi_Cube</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2017-12-15T09:44:49.82Z</LastDeployed>
+</DeploymentSnapshot>

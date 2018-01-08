@@ -1,0 +1,5 @@
+select r.ClientID as KlijentID,c.CityID as LokacijaID,b.UserID as UposlenikID,r.RoomID,rs.ExtraFeatureID as UslugaID,Replace(CONVERT(nvarchar(10),r.DateReserved,104),'.','')as VrijemeID,b.Total
+from Reservations as r join Clients as c 
+on r.ClientID =c.ClientID join Bills as b
+on c.ClientID=b.ClientID join ReservationServices as rs
+on r.ReservationID=rs.ReservationID

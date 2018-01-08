@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2008
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "Bi_Cube", "Bi_Cube\Bi_Cube.dwproj", "{2CF713A0-3792-4473-A6C0-B90CBB87F6E1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2CF713A0-3792-4473-A6C0-B90CBB87F6E1}.Development|Default.ActiveCfg = Development
+		{2CF713A0-3792-4473-A6C0-B90CBB87F6E1}.Development|Default.Build.0 = Development
+		{2CF713A0-3792-4473-A6C0-B90CBB87F6E1}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {24CED386-41CA-4937-ADAA-8B90F6A6AEE3}
+	EndGlobalSection
+EndGlobal

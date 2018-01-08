@@ -1,0 +1,4 @@
+select R.RoomID as SobaAltKey, rt.Title as VrstaSobe
+from Rooms as R join RoomTypes as RT 
+	on r.RoomTypeID=rt.RoomTypeID join RoomTypeGallery as RTG 
+	on rt.RoomTypeID=rtg.RoomTypeID

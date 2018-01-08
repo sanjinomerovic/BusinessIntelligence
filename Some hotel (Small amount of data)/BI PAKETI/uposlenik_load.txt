@@ -1,0 +1,2 @@
+select [EmployeeID] as UposlenikAltKey,[FirstName]+' '+[LastName] as ImePrezime,[Username] as Username
+from [dbo].[Employees]

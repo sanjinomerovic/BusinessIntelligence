@@ -1,0 +1,5 @@
+SELECT        0 AS LokacijaAltKey, 'Nepoznato' AS NazivGrada, 'Nepoznato' AS NazivDrzave
+UNION
+SELECT        CC.CityID, CC.Name, C.Name AS Expr1
+FROM            Countries AS C INNER JOIN
+                         Cities AS CC ON C.CountryID = CC.CountryID

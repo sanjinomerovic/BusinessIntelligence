@@ -1,0 +1,530 @@
+{
+  "name": "SemanticModel",
+  "compatibilityLevel": 1200,
+  "model": {
+    "culture": "en-GB",
+    "dataSources": [
+      {
+        "name": "SqlServer local BI",
+        "connectionString": "Provider=SQLNCLI11;Data Source=(local);Initial Catalog=BI;Integrated Security=SSPI;Persist Security Info=false",
+        "impersonationMode": "impersonateAccount",
+        "account": "HOME",
+        "annotations": [
+          {
+            "name": "ConnectionEditUISource",
+            "value": "SqlServer"
+          }
+        ]
+      }
+    ],
+    "tables": [
+      {
+        "name": "Bills",
+        "columns": [
+          {
+            "name": "BillID",
+            "dataType": "int64",
+            "sourceColumn": "BillID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ReservationID",
+            "dataType": "int64",
+            "sourceColumn": "ReservationID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "DateIssued",
+            "dataType": "dateTime",
+            "sourceColumn": "DateIssued",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "IssuedOn",
+            "dataType": "string",
+            "sourceColumn": "IssuedOn",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ClientID",
+            "dataType": "int64",
+            "sourceColumn": "ClientID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "UserID",
+            "dataType": "int64",
+            "sourceColumn": "UserID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Bruto",
+            "dataType": "double",
+            "sourceColumn": "Total",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "type": "calculated",
+            "name": "PDV 17%",
+            "dataType": "double",
+            "isDataTypeInferred": true,
+            "expression": "[Bruto]*0.17"
+          },
+          {
+            "type": "calculated",
+            "name": "Neto",
+            "dataType": "double",
+            "isDataTypeInferred": true,
+            "expression": "[Bruto]-[PDV 17%]"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Bills",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [dbo].[Bills].* FROM [dbo].[Bills] ",
+              "dataSource": "SqlServer local BI"
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "BrutoTotal",
+            "expression": "SUM([Bruto])"
+          },
+          {
+            "name": "TotalPDV",
+            "expression": "SUM([PDV 17%])",
+            "kpi": {
+              "targetExpression": "'Bills'[TotalBills]",
+              "statusGraphic": "Traffic Light - Single",
+              "statusExpression": [
+                "var x='Bills'[TotalPDV]/'Bills'[_TotalPDV Goal] return",
+                "            if(ISBLANK(x),BLANK(),",
+                "                    If(x<0.2,-1,",
+                "\t                If(x<0.5,0,1)",
+                "                )",
+                "            )",
+                "            "
+              ],
+              "annotations": [
+                {
+                  "name": "GoalType",
+                  "value": "Measure"
+                },
+                {
+                  "name": "KpiStatusType",
+                  "value": "Linear"
+                },
+                {
+                  "name": "KpiThresholdType",
+                  "value": "Percentage"
+                },
+                {
+                  "name": "KpiThresholdOrdering",
+                  "value": "Ascending"
+                },
+                {
+                  "name": "KpiThresholdCount",
+                  "value": "2"
+                },
+                {
+                  "name": "KpiThreshold_0",
+                  "value": "20"
+                },
+                {
+                  "name": "KpiThreshold_1",
+                  "value": "50"
+                }
+              ]
+            }
+          },
+          {
+            "name": "NetoTotal",
+            "expression": "SUM([Neto])"
+          },
+          {
+            "name": "TotalBills",
+            "expression": "COUNT([BillID])"
+          },
+          {
+            "name": "Average",
+            "expression": "AVERAGE([Bruto])"
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Bills].* FROM [dbo].[Bills] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Bills"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Clients",
+        "columns": [
+          {
+            "name": "ClientID",
+            "dataType": "int64",
+            "sourceColumn": "ClientID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "FirstName",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "FirstName",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "LastName",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "LastName",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Sex",
+            "dataType": "string",
+            "sourceColumn": "Sex",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "type": "calculated",
+            "name": "Client",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "Clients[FirstName]&\" \"&Clients[LastName]"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Clients",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [dbo].[Clients].* FROM [dbo].[Clients] ",
+              "dataSource": "SqlServer local BI"
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "TotalClients",
+            "expression": "COUNT([ClientID])"
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Clients].* FROM [dbo].[Clients] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Clients"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Employees",
+        "columns": [
+          {
+            "name": "EmployeeID",
+            "dataType": "int64",
+            "sourceColumn": "EmployeeID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "FirstName",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "FirstName",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "LastName",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "LastName",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "type": "calculated",
+            "name": "Employee",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "[FirstName]&\" \"&[LastName]"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Employees",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [dbo].[Employees].* FROM [dbo].[Employees] ",
+              "dataSource": "SqlServer local BI"
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "TotalEmployees",
+            "expression": "COUNT([EmployeeID])"
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Employees].* FROM [dbo].[Employees] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Employees"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Reservations",
+        "columns": [
+          {
+            "name": "ReservationID",
+            "dataType": "int64",
+            "sourceColumn": "ReservationID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ClientID",
+            "dataType": "int64",
+            "sourceColumn": "ClientID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "RoomID",
+            "dataType": "int64",
+            "sourceColumn": "RoomID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ArrivalDate",
+            "dataType": "dateTime",
+            "sourceColumn": "ArrivalDate",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "DepartureDate",
+            "dataType": "dateTime",
+            "sourceColumn": "DepartureDate",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "DateReserved",
+            "dataType": "dateTime",
+            "sourceColumn": "DateReserved",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "NumberOfPeople",
+            "dataType": "int64",
+            "sourceColumn": "NumberOfPeople",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "type": "calculated",
+            "name": "Year",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "YEAR([DepartureDate])"
+          },
+          {
+            "type": "calculated",
+            "name": "Month",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "MONTH([DepartureDate])"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Reservations",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [dbo].[Reservations].* FROM [dbo].[Reservations] ",
+              "dataSource": "SqlServer local BI"
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "TotalReservations",
+            "expression": "COUNT([ReservationID])"
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Reservations].* FROM [dbo].[Reservations] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Reservations"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "ReservationServices",
+        "columns": [
+          {
+            "name": "ReservationServiceID",
+            "dataType": "int64",
+            "sourceColumn": "ReservationServiceID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ExtraFeatureID",
+            "dataType": "int64",
+            "sourceColumn": "ExtraFeatureID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "DateReserved",
+            "dataType": "dateTime",
+            "sourceColumn": "DateReserved",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "ReservationID",
+            "dataType": "int64",
+            "sourceColumn": "ReservationID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Price",
+            "dataType": "double",
+            "sourceColumn": "Price",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "Title",
+            "dataType": "string",
+            "sourceColumn": "Title",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "ReservationServices",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [dbo].[ReservationServices].* FROM [dbo].[ReservationServices] ",
+              "dataSource": "SqlServer local BI"
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "TotalOfServices",
+            "expression": [
+              "SUM(ReservationServices[Price])",
+              ""
+            ]
+          },
+          {
+            "name": "TotalServices",
+            "expression": "COUNT([ReservationServiceID])"
+          },
+          {
+            "name": "AverageOfServices",
+            "expression": "AVERAGE([Price])"
+          },
+          {
+            "name": "TotalFeatures",
+            "expression": "COUNT([ExtraFeatureID])"
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[ReservationServices].* FROM [dbo].[ReservationServices] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "ReservationServices"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "e1856393-fb93-44de-bf61-7a4e14a1d26d",
+        "fromTable": "Bills",
+        "fromColumn": "ClientID",
+        "toTable": "Clients",
+        "toColumn": "ClientID"
+      },
+      {
+        "name": "0d2d9702-0013-4b26-81f2-4930f7548e0c",
+        "fromTable": "Bills",
+        "fromColumn": "UserID",
+        "toTable": "Employees",
+        "toColumn": "EmployeeID"
+      },
+      {
+        "name": "306f7dd6-1511-4d23-baa9-0334ca3e4a41",
+        "fromTable": "ReservationServices",
+        "fromColumn": "ReservationID",
+        "toTable": "Reservations",
+        "toColumn": "ReservationID"
+      },
+      {
+        "name": "fc81e3aa-18db-4526-90d4-12047d580e40",
+        "fromTable": "Reservations",
+        "fromColumn": "ClientID",
+        "toTable": "Clients",
+        "toColumn": "ClientID",
+        "isActive": false
+      },
+      {
+        "name": "a2253462-1c49-407b-8bb3-55b91b119430",
+        "fromTable": "Bills",
+        "fromColumn": "ReservationID",
+        "toTable": "Reservations",
+        "toColumn": "ReservationID"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "ClientCompatibilityLevel",
+        "value": "400"
+      }
+    ]
+  },
+  "id": "SemanticModel"
+}

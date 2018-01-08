@@ -1,0 +1,2 @@
+select c.ClientID as KlijentAltKey,c.FirstName+' '+c.LastName as ImePrezime,c.Sex as Spol
+from Clients as c join Cities as cc on c.CityID=cc.CityID

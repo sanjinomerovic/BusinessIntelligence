@@ -1,0 +1,3 @@
+select rs.ExtraFeatureID as UslugaAltKey,rs.Title as NazivUsluge,e.Title as NazivFeaturea
+from ReservationServices as rs join ExtraFeatures as e
+	on rs.ExtraFeatureID=e.ExtraFeatureID

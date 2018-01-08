@@ -1,0 +1,111 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="2ba0b810-e40b-4477-a48b-2a7fb8ad04de" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>BI</ID>
+  <Name>BI</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>BI</DataSourceID>
+  <Schema>
+    <xs:schema id="BI" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="BI" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="fb375f6f-0c7e-49b3-b0bb-7cfa489955dc">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_EmployeeRiskOfQuitting" msprop:design-time-name="6fa662a8-2558-48f5-80b2-6f76cbe63194" msprop:DbTableName="EmployeeRiskOfQuitting" msprop:FriendlyName="EmployeeRiskOfQuitting" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="EmployeeID" msprop:design-time-name="85f15c8e-3c9a-48df-86ef-302af8eb8b65" msprop:DbColumnName="EmployeeID" msprop:FriendlyName="EmployeeID" type="xs:int" />
+                  <xs:element name="FirstName" msprop:design-time-name="77c6deea-3e8f-4b79-918c-19b04bd3f0ce" msprop:DbColumnName="FirstName" msprop:FriendlyName="FirstName">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="LastName" msprop:design-time-name="4dac53f0-89cb-457e-8b1a-62045997c357" msprop:DbColumnName="LastName" msprop:FriendlyName="LastName">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Phone" msprop:design-time-name="1c100535-bd8d-4b74-8b70-7af1313ba164" msprop:DbColumnName="Phone" msprop:FriendlyName="Phone">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Email" msprop:design-time-name="4fec4df4-f4e9-4e10-91f9-4f633651e0ab" msprop:DbColumnName="Email" msprop:FriendlyName="Email">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Username" msprop:design-time-name="9dd186bd-ec5e-49bb-87f5-f4a149b1515f" msprop:DbColumnName="Username" msprop:FriendlyName="Username">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="NumberOfReservations" msprop:design-time-name="6c1d03cc-08b6-4809-8557-415841865640" msprop:DbColumnName="NumberOfReservations" msprop:FriendlyName="NumberOfReservations" type="xs:int" />
+                  <xs:element name="AverageProfit" msprop:design-time-name="21962564-a334-4ea0-9227-d2418273c1a7" msprop:DbColumnName="AverageProfit" msprop:FriendlyName="AverageProfit" type="xs:decimal" />
+                  <xs:element name="TotalProfit" msprop:design-time-name="ee8ab400-ed0e-49d8-aa08-6291b6c40012" msprop:DbColumnName="TotalProfit" msprop:FriendlyName="TotalProfit" type="xs:decimal" />
+                  <xs:element name="TotalPeople" msprop:design-time-name="07d392dc-21b3-4756-a43b-654a96401bab" msprop:DbColumnName="TotalPeople" msprop:FriendlyName="TotalPeople" type="xs:int" />
+                  <xs:element name="RiskOfQuit" msprop:design-time-name="c65f7ea4-4ed4-4f52-81c5-802e73f29776" msprop:DbColumnName="RiskOfQuit" msprop:FriendlyName="RiskOfQuit">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="15" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_EmployeeRiskOfQuitting" />
+          <xs:field xpath="EmployeeID" />
+        </xs:unique>
+      </xs:element>
+    </xs:schema>
+    <BI xmlns="" />
+  </Schema>
+</DataSourceView>
