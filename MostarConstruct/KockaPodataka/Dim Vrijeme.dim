@@ -1,0 +1,278 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="1b628091-4bb0-4495-874b-196008327a99" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Vrijeme</ID>
+  <Name>Dim Vrijeme</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1470" scrolltop="-4855" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="5980" y="13705" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01ee0000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DimVrijeme" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c0000b80b00009b0f0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimVrijeme" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-1470</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-4855</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
+      <Value>
+        <DiagramLayout ZoomPercent="100" ViewPortX="0" ViewPortY="0" xmlns="">
+          <Shapes NodeWidth="123">
+            <Shape Id="Vrijeme Key" Expanded="false">
+              <Attributes>
+                <Attribute Id="Vrijeme Key" />
+                <Attribute Id="Mjesec" />
+              </Attributes>
+              <Position x="20" y="20" />
+            </Shape>
+            <Shape Id="Dan" Expanded="false">
+              <Attributes>
+                <Attribute Id="Dan" />
+              </Attributes>
+              <Position x="178" y="20" />
+            </Shape>
+            <Shape Id="Mjesec Opisno" Expanded="false">
+              <Attributes>
+                <Attribute Id="Mjesec Opisno" />
+              </Attributes>
+              <Position x="337" y="20" />
+            </Shape>
+            <Shape Id="Godina" Expanded="false">
+              <Attributes>
+                <Attribute Id="Godina" />
+              </Attributes>
+              <Position x="496" y="20" />
+            </Shape>
+          </Shapes>
+        </DiagramLayout>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="50bb9a8a-c7f3-49f7-b84d-ad36ce45310f">
+    <DataSourceViewID>Armin Mostar Construct DW</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="a65a3889-9ab0-49a9-9e76-94019d144b62">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="fdf955a1-f0db-41b4-841c-8cfbce1cb51e">
+      <ID>Vrijeme Key</ID>
+      <Name>Vrijeme Key</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9e376f14-f5a9-4c5c-afe7-0d1f05c1d54b">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0fa82c12-8429-4508-88d9-d60071fb884b">
+            <TableID>dbo_DimVrijeme</TableID>
+            <ColumnID>VrijemeKey</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="00ded123-1649-4fb2-bb5a-299d6cd988b0">
+          <AttributeID>Dan</AttributeID>
+          <Name>Dan</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="0cac665e-1e19-4341-bd21-315acc1f690a">
+          <AttributeID>Mjesec</AttributeID>
+          <Name>Mjesec</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="f6029680-e1bc-4726-bc0f-d47e2477c8b9">
+      <ID>Dan</ID>
+      <Name>Dan</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b139325a-027e-45a0-b96a-c665a6f44fab">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0153c773-b902-4247-9792-cefa790b383c">
+            <TableID>dbo_DimVrijeme</TableID>
+            <ColumnID>Dan</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="487e2f0b-4d95-484d-8a29-54d8f5d06439">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0b9e7580-b6b3-40f0-841d-2716736f1b29">
+            <TableID>dbo_DimVrijeme</TableID>
+            <ColumnID>Godina</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="3865da12-d84f-43a6-af3d-dd82b54a2de9">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d5bd1b08-7a83-4e65-834d-c3b198b7e954">
+            <TableID>dbo_DimVrijeme</TableID>
+            <ColumnID>MjesecOpisno</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="e68f1860-ab70-4ac3-8335-47784ce63944">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="c6e1cad9-d7e9-4e7b-b06f-51b19a343301">
+          <TableID>dbo_DimVrijeme</TableID>
+          <ColumnID>Dan</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="9ff9219b-7ae8-4ad2-b5e6-4c1f91f9c80e">
+          <AttributeID>Mjesec Opisno</AttributeID>
+          <Name>Mjesec Opisno</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="05b6b319-9abc-44a2-a3fa-5bf5b4b2548d">
+      <ID>Mjesec</ID>
+      <Name>Mjesec</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5270a455-42b6-4578-8c97-94b6363098a1">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c80de537-abed-474a-a967-65d481c7fbc6">
+            <TableID>dbo_DimVrijeme</TableID>
+            <ColumnID>Mjesec</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d1861b73-ac88-492a-82d1-b3e7188e164d">
+      <ID>Godina</ID>
+      <Name>Godina</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5f35e722-5232-4dcc-bac1-1c0bea6f6287">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="08afe1c1-8586-47a5-b0c8-4e64f3e3a47a">
+            <TableID>dbo_DimVrijeme</TableID>
+            <ColumnID>Godina</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="39ad9500-fe4a-4bcb-845c-aad7e0fd83f2">
+      <ID>Mjesec Opisno</ID>
+      <Name>Mjesec Opisno</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f1a6e896-1b89-4dc0-8db9-58cc33d209bf">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7e1f145a-3b3e-431e-8c36-76dce56c89ff">
+            <TableID>dbo_DimVrijeme</TableID>
+            <ColumnID>MjesecOpisno</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="ab540e31-1968-428a-bef5-71cd31b26335">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cfa0666f-52f2-4c3c-8eed-744e60f8ccb4">
+            <TableID>dbo_DimVrijeme</TableID>
+            <ColumnID>Godina</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="034bcc7f-114e-476f-bb5e-bf40c6b9787c">
+        <DataType>WChar</DataType>
+        <DataSize>20</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="674d7bca-4e1c-4b90-bece-46d85f3a9a46">
+          <TableID>dbo_DimVrijeme</TableID>
+          <ColumnID>MjesecOpisno</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="1baa1e97-8458-457c-b00e-2a4f3af09cc7">
+          <AttributeID>Godina</AttributeID>
+          <Name>Godina</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="ce2e02f2-8add-4a51-9f37-77d18f40cdb7">
+      <ID>Hierarchy</ID>
+      <Name>Hierarchy</Name>
+      <Levels>
+        <Level dwd:design-time-name="cbd62d1a-1463-4e1f-89ba-aea1d3da7ed4">
+          <ID>Godina</ID>
+          <Name>Godina</Name>
+          <SourceAttributeID>Godina</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="08b2c1c5-4ea5-4920-946f-9e02cccee1f0">
+          <ID>Mjesec Opisno</ID>
+          <Name>Mjesec Opisno</Name>
+          <SourceAttributeID>Mjesec Opisno</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="c50c7098-fd64-43b6-88d1-fa44151a4270">
+          <ID>Dan</ID>
+          <Name>Dan</Name>
+          <SourceAttributeID>Dan</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

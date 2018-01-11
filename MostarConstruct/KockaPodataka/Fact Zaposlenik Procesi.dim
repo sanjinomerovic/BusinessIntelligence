@@ -1,0 +1,208 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="25ae173d-2e21-4eb0-b3c3-0ec534dca794" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Fact Zaposlenik Procesi</ID>
+  <Name>Fact Zaposlenik Procesi</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-245" scrolltop="-3705" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="5980" y="13705" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01ee0000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="FactZaposlenikProcesi" left="20" top="450" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="5450" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c00004a15000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_FactZaposlenikProcesi" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-245</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-3705</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>450</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="9b62104d-f70e-492e-8c64-d58aa253e615">
+    <DataSourceViewID>Armin Mostar Construct DW</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="7dbda91f-63fc-4360-b389-0b61255ba28b">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="57a8d876-dafc-4dcd-aa9d-2bf4ec7df18d">
+      <ID>Zaposlenik Proces Key</ID>
+      <Name>Zaposlenik Proces Key</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8b8cf28a-cfe6-4a66-9885-e110454f3882">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d87b7e8d-9de0-4a15-a6c0-d86d47f0911b">
+            <TableID>dbo_FactZaposlenikProcesi</TableID>
+            <ColumnID>ZaposlenikProcesKey</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="252335f0-f7dd-4387-a9cd-57f09a09ee9f">
+          <AttributeID>Plate Key</AttributeID>
+          <Name>Plate Key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="16d9c450-5381-41d7-9ec6-0a50f5297648">
+          <AttributeID>Zaposlenik Key</AttributeID>
+          <Name>Zaposlenik Key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="db999ecb-cce6-4f6c-9262-9ebc4f5e8913">
+          <AttributeID>Radni Nalog Key</AttributeID>
+          <Name>Radni Nalog Key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="077f304a-5892-44ac-ba44-8ed9db6187b2">
+          <AttributeID>Plate Datum</AttributeID>
+          <Name>Plate Datum</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="ecd46602-1607-4f90-b06f-9c8dc3012227">
+          <AttributeID>Putni Nalog Key</AttributeID>
+          <Name>Putni Nalog Key</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="6dd5008d-2f8e-4218-80e9-b9bee5b3db76">
+      <ID>Plate Key</ID>
+      <Name>Plate Key</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="16cd6cc0-ffa1-4d48-83af-16c0b29b5ae4">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="071b54bc-df9e-44b4-be33-2af4f267a50a">
+            <TableID>dbo_FactZaposlenikProcesi</TableID>
+            <ColumnID>PlateKey</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="febc3b58-ba08-4406-8238-0ac6d61a69d3">
+      <ID>Zaposlenik Key</ID>
+      <Name>Zaposlenik Key</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="272a7fe5-ba78-4253-8c81-f6555a39f002">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7bc22b9e-6d05-41da-8d5b-249b74cd011d">
+            <TableID>dbo_FactZaposlenikProcesi</TableID>
+            <ColumnID>ZaposlenikKey</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="4145dfc3-6a41-458c-8880-8f801b321318">
+      <ID>Radni Nalog Key</ID>
+      <Name>Radni Nalog Key</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="788b43ab-9bad-47ba-ab93-fa080620b1c9">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="24e899f4-f97c-469a-b051-94fe355ae66b">
+            <TableID>dbo_FactZaposlenikProcesi</TableID>
+            <ColumnID>RadniNalogKey</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="665b5308-bea6-4306-bd6e-72db9eb8744f">
+      <ID>Plate Datum</ID>
+      <Name>Plate Datum</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="eafc175a-6615-4389-a4e2-7148399b44b2">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="57e2d5df-0143-48e7-86c4-387d16e06b75">
+            <TableID>dbo_FactZaposlenikProcesi</TableID>
+            <ColumnID>PlateDatum</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a2d30bae-4c86-4a37-ac9c-79921d028acf">
+      <ID>Putni Nalog Key</ID>
+      <Name>Putni Nalog Key</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1e8920da-8989-4a7e-b940-a0ae01afaaa9">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="70ef6412-c9d6-4935-b5cd-a2bcce990c94">
+            <TableID>dbo_FactZaposlenikProcesi</TableID>
+            <ColumnID>PutniNalogKey</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

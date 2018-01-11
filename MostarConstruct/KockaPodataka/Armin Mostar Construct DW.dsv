@@ -1,0 +1,240 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="94c84d7d-fdc0-4280-91df-abfd25cc1b09" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Armin Mostar Construct DW</ID>
+  <Name>Armin Mostar Construct DW</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Armin Mostar Construct DW</DataSourceID>
+  <Schema>
+    <xs:schema id="Armin_x0020_Mostar_x0020_Construct_x0020_DW" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Armin_x0020_Mostar_x0020_Construct_x0020_DW" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="59b96e49-aa0a-40bb-9f57-351d1d8abaff">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_DimPlate" msprop:design-time-name="94c59988-b420-4aad-8d52-fbb4c9acbb5b" msprop:DbTableName="DimPlate" msprop:FriendlyName="DimPlate" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="PlateKey" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="bd918615-6e90-4e10-aa41-2980df907691" msprop:DbColumnName="PlateKey" msprop:FriendlyName="PlateKey" type="xs:int" />
+                  <xs:element name="PlateAltKey" msprop:design-time-name="43d34b8a-355f-41eb-bc7a-7fe1d1e04b60" msprop:DbColumnName="PlateAltKey" msprop:FriendlyName="PlateAltKey" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DimPutniNalog" msprop:design-time-name="8452bf1f-c405-4049-8d9a-2f8a516e0945" msprop:DbTableName="DimPutniNalog" msprop:FriendlyName="DimPutniNalog" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="PutniNalogKey" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="5f104a3f-de6c-4c4a-a7da-685d6c1dc51d" msprop:DbColumnName="PutniNalogKey" msprop:FriendlyName="PutniNalogKey" type="xs:int" />
+                  <xs:element name="PutniNalogAltKey" msprop:design-time-name="ba721eb3-b247-4883-8ebf-8c82474de969" msprop:DbColumnName="PutniNalogAltKey" msprop:FriendlyName="PutniNalogAltKey" type="xs:int" />
+                  <xs:element name="Svrha" msprop:design-time-name="ad7ec842-612e-4ea8-a41c-d350659d942a" msprop:DbColumnName="Svrha" msprop:FriendlyName="Svrha">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DimRadniNalog" msprop:design-time-name="91519c81-3532-4e54-ab72-a7b3b51f9d14" msprop:DbTableName="DimRadniNalog" msprop:FriendlyName="DimRadniNalog" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="RadniNalogKey" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="75ce5763-dad7-44d6-ae0d-bd33393fd721" msprop:DbColumnName="RadniNalogKey" msprop:FriendlyName="RadniNalogKey" type="xs:int" />
+                  <xs:element name="RadniNalogAltKey" msprop:design-time-name="6b887508-6ef5-4ce1-8474-2988992826e5" msprop:DbColumnName="RadniNalogAltKey" msprop:FriendlyName="RadniNalogAltKey" type="xs:int" />
+                  <xs:element name="NazivRadilista" msprop:design-time-name="a97e9cab-d5f4-4580-b4bd-8905d88b1ea0" msprop:DbColumnName="NazivRadilista" msprop:FriendlyName="NazivRadilista" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DimVrijeme" msprop:design-time-name="dd2516b3-834d-43b5-8b91-fd9f1820d65a" msprop:DbTableName="DimVrijeme" msprop:FriendlyName="DimVrijeme" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="VrijemeKey" msprop:design-time-name="7583b50d-0a00-4aaa-957f-563159f03b74" msprop:DbColumnName="VrijemeKey" msprop:FriendlyName="VrijemeKey">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Dan" msprop:design-time-name="5c04f8f1-0a3e-4004-93ba-72c993ea3d85" msprop:DbColumnName="Dan" msprop:FriendlyName="Dan" type="xs:int" />
+                  <xs:element name="DanOpisno" msprop:design-time-name="111c68a3-6f00-477a-971e-8332da18131a" msprop:DbColumnName="DanOpisno" msprop:FriendlyName="DanOpisno">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Mjesec" msprop:design-time-name="61e7ac81-f24d-441d-aba7-abdc6fc4a284" msprop:DbColumnName="Mjesec" msprop:FriendlyName="Mjesec" type="xs:int" />
+                  <xs:element name="MjesecOpisno" msprop:design-time-name="43089e52-4ff2-46fa-828a-f94b2586f490" msprop:DbColumnName="MjesecOpisno" msprop:FriendlyName="MjesecOpisno">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Godina" msprop:design-time-name="245d2640-b8bb-4375-8c2a-ec5fc48481e7" msprop:DbColumnName="Godina" msprop:FriendlyName="Godina" type="xs:int" />
+                  <xs:element name="Datum" msprop:design-time-name="7046b6e6-bf4b-447d-baa9-fbf7d708f0f2" msprop:DbColumnName="Datum" msprop:FriendlyName="Datum">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="40" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DimZaposlenik" msprop:design-time-name="882f732f-3ab0-4eab-a4af-56b142332cc4" msprop:DbTableName="DimZaposlenik" msprop:FriendlyName="DimZaposlenik" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ZaposlenikKey" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="51853501-fffb-4864-8a49-9bac333fa8d6" msprop:DbColumnName="ZaposlenikKey" msprop:FriendlyName="ZaposlenikKey" type="xs:int" />
+                  <xs:element name="ZaposlenikAltKey" msprop:design-time-name="a490837e-a013-45fc-ad04-bfe726716a84" msprop:DbColumnName="ZaposlenikAltKey" msprop:FriendlyName="ZaposlenikAltKey" type="xs:int" />
+                  <xs:element name="ImePrezime" msprop:design-time-name="c3f1b02a-8132-440d-9ba6-96b8c5b08833" msprop:DbColumnName="ImePrezime" msprop:FriendlyName="ImePrezime">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="NazivPozicije" msprop:design-time-name="bee8e8d0-5bc4-4f6b-920d-822c52bb5b46" msprop:DbColumnName="NazivPozicije" msprop:FriendlyName="NazivPozicije">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_FactZaposlenikProcesi" msprop:design-time-name="a4dc9053-e785-42f2-a3f2-d5c37aa76b92" msprop:DbTableName="FactZaposlenikProcesi" msprop:FriendlyName="FactZaposlenikProcesi" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ZaposlenikProcesKey" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="ccfeac15-509d-4543-a5ef-fbb12824e450" msprop:DbColumnName="ZaposlenikProcesKey" msprop:FriendlyName="ZaposlenikProcesKey" type="xs:int" />
+                  <xs:element name="ZaposlenikKey" msprop:design-time-name="e6fdd694-4583-4331-b9f8-daf35f4dbf4f" msprop:DbColumnName="ZaposlenikKey" msprop:FriendlyName="ZaposlenikKey" type="xs:int" minOccurs="0" />
+                  <xs:element name="PlateKey" msprop:design-time-name="e34b551a-60d2-4c13-ab5e-6740187d1880" msprop:DbColumnName="PlateKey" msprop:FriendlyName="PlateKey" type="xs:int" minOccurs="0" />
+                  <xs:element name="RadniNalogKey" msprop:design-time-name="ecf6c17b-47e5-4920-b7a7-0cafcf1384a0" msprop:DbColumnName="RadniNalogKey" msprop:FriendlyName="RadniNalogKey" type="xs:int" minOccurs="0" />
+                  <xs:element name="PutniNalogKey" msprop:design-time-name="9722e6b2-b70d-4039-9a8d-36335f57f3cc" msprop:DbColumnName="PutniNalogKey" msprop:FriendlyName="PutniNalogKey" type="xs:int" minOccurs="0" />
+                  <xs:element name="UkupanBrojZaploslenih" msprop:design-time-name="5d7db44a-982f-441a-b4cc-94c7a3a28d69" msprop:DbColumnName="UkupanBrojZaploslenih" msprop:FriendlyName="UkupanBrojZaploslenih" type="xs:int" />
+                  <xs:element name="SumaPlataSaDoprinosima" msprop:design-time-name="7a01130b-29e5-4367-869d-1472934e027f" msprop:DbColumnName="SumaPlataSaDoprinosima" msprop:FriendlyName="SumaPlataSaDoprinosima" type="xs:decimal" />
+                  <xs:element name="SumaPlata" msprop:design-time-name="2228c67c-8496-4679-b9df-a959805458af" msprop:DbColumnName="SumaPlata" msprop:FriendlyName="SumaPlata" type="xs:decimal" />
+                  <xs:element name="ProsjekPlata" msprop:design-time-name="dcb699c5-53a3-49e6-af82-9c330d20257f" msprop:DbColumnName="ProsjekPlata" msprop:FriendlyName="ProsjekPlata" type="xs:decimal" />
+                  <xs:element name="UkupnoRadnihNaloga" msprop:design-time-name="9686aaec-fd60-4ea6-b268-12daf78eb51f" msprop:DbColumnName="UkupnoRadnihNaloga" msprop:FriendlyName="UkupnoRadnihNaloga" type="xs:int" />
+                  <xs:element name="UkupnoPutnihNaloga" msprop:design-time-name="c9252172-38ac-4790-b719-fd34f913e8cf" msprop:DbColumnName="UkupnoPutnihNaloga" msprop:FriendlyName="UkupnoPutnihNaloga" type="xs:int" />
+                  <xs:element name="UkupnoRadnikaNaRadilistu" msprop:design-time-name="6d9eb8af-b896-41c4-862b-7244039632a8" msprop:DbColumnName="UkupnoRadnikaNaRadilistu" msprop:FriendlyName="UkupnoRadnikaNaRadilistu" type="xs:int" />
+                  <xs:element name="UkupniTroskoviPutovanja" msprop:design-time-name="bb87891f-c3fc-4b54-826e-ff7d6b1f4389" msprop:DbColumnName="UkupniTroskoviPutovanja" msprop:FriendlyName="UkupniTroskoviPutovanja" type="xs:decimal" />
+                  <xs:element name="TroskoviPutovanjaJedinicnaMjera" msprop:design-time-name="ee9e3ccb-ff7c-43fc-b315-edf9518bfb52" msprop:DbColumnName="TroskoviPutovanjaJedinicnaMjera" msprop:FriendlyName="TroskoviPutovanjaJedinicnaMjera" type="xs:decimal" />
+                  <xs:element name="PutniNalogSatiJedinicnaMjera" msprop:design-time-name="96875c06-aa14-447e-a888-579048db747b" msprop:DbColumnName="PutniNalogSatiJedinicnaMjera" msprop:FriendlyName="PutniNalogSatiJedinicnaMjera" type="xs:decimal" />
+                  <xs:element name="RadniNalogSatiJedinicnaMjera" msprop:design-time-name="a50e8f18-4fe9-4a5b-ac04-8dacf39327f6" msprop:DbColumnName="RadniNalogSatiJedinicnaMjera" msprop:FriendlyName="RadniNalogSatiJedinicnaMjera" type="xs:int" />
+                  <xs:element name="NetoPlata" msprop:design-time-name="212b7450-27aa-48b9-bdc5-414202a9af7c" msprop:DbColumnName="NetoPlata" msprop:FriendlyName="NetoPlata" type="xs:decimal" />
+                  <xs:element name="BrutoPlata" msprop:design-time-name="56143eea-1f8a-42d6-8582-ab18c2b1844e" msprop:DbColumnName="BrutoPlata" msprop:FriendlyName="BrutoPlata" type="xs:decimal" />
+                  <xs:element name="PlateDatum" msprop:design-time-name="a7b7323f-94a2-4f1b-a4da-695251f81a41" msprop:DbColumnName="PlateDatum" msprop:FriendlyName="PlateDatum">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="RadniNalogDatum" msprop:design-time-name="772fb7aa-eeef-4842-bcab-e8a2fdbf1216" msprop:DbColumnName="RadniNalogDatum" msprop:FriendlyName="RadniNalogDatum">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PutniNalogDatum" msprop:design-time-name="ea2872a2-2c40-4ec2-8d0d-9e2a1f1e89ed" msprop:DbColumnName="PutniNalogDatum" msprop:FriendlyName="PutniNalogDatum">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DimPlate" />
+          <xs:field xpath="PlateKey" />
+        </xs:unique>
+        <xs:unique name="dbo_DimPutniNalog_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DimPutniNalog" />
+          <xs:field xpath="PutniNalogKey" />
+        </xs:unique>
+        <xs:unique name="dbo_DimRadniNalog_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DimRadniNalog" />
+          <xs:field xpath="RadniNalogKey" />
+        </xs:unique>
+        <xs:unique name="dbo_DimVrijeme_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DimVrijeme" />
+          <xs:field xpath="VrijemeKey" />
+        </xs:unique>
+        <xs:unique name="dbo_DimZaposlenik_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DimZaposlenik" />
+          <xs:field xpath="ZaposlenikKey" />
+        </xs:unique>
+        <xs:unique name="dbo_FactZaposlenikProcesi_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_FactZaposlenikProcesi" />
+          <xs:field xpath="ZaposlenikProcesKey" />
+        </xs:unique>
+        <xs:keyref name="FK__FactZapos__Putni__37A5467C" refer="dbo_DimPutniNalog_Constraint1">
+          <xs:selector xpath=".//dbo_FactZaposlenikProcesi" />
+          <xs:field xpath="PutniNalogKey" />
+        </xs:keyref>
+        <xs:keyref name="FK_FactZaposlenikProcesi_DimVrijeme" refer="dbo_DimVrijeme_Constraint1">
+          <xs:selector xpath=".//dbo_FactZaposlenikProcesi" />
+          <xs:field xpath="PlateDatum" />
+        </xs:keyref>
+        <xs:keyref name="FK__FactZapos__Radni__36B12243" refer="dbo_DimRadniNalog_Constraint1">
+          <xs:selector xpath=".//dbo_FactZaposlenikProcesi" />
+          <xs:field xpath="RadniNalogKey" />
+        </xs:keyref>
+        <xs:keyref name="FK__FactZapos__Zapos__34C8D9D1" refer="dbo_DimZaposlenik_Constraint1">
+          <xs:selector xpath=".//dbo_FactZaposlenikProcesi" />
+          <xs:field xpath="ZaposlenikKey" />
+        </xs:keyref>
+        <xs:keyref name="FK__FactZapos__Plate__35BCFE0A" refer="Constraint1">
+          <xs:selector xpath=".//dbo_FactZaposlenikProcesi" />
+          <xs:field xpath="PlateKey" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <Armin_x0020_Mostar_x0020_Construct_x0020_DW xmlns="" />
+  </Schema>
+</DataSourceView>

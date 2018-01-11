@@ -1,0 +1,96 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>KockaPodataka</Database>
+    <Server>localhost</Server>
+    <ConnectionString>Data Source=localhost;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>DoNotProcess</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>eIhsbwbfL5ouuvm++mRNfm1fu9k=09/01/2018 11:22:0109/01/2018 11:10:04</TimeStamp>
+        <ID>
+          <String>Armin Mostar Construct DW</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>384mDBiN7HGksXw+mq3o3nQrBIA=09/01/2018 11:11:2309/01/2018 11:11:23</TimeStamp>
+        <ID>
+          <String>Armin Mostar Construct DW</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>z8xvlVpMFd18FugZp1eWm+1YBRc=09/01/2018 11:15:1709/01/2018 11:15:17</TimeStamp>
+        <ID>
+          <String>Dim Plate</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>z98PgVmNxvQsMEauZJt+3od5ngk=09/01/2018 11:19:4609/01/2018 11:15:17</TimeStamp>
+        <ID>
+          <String>Dim Zaposlenik</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>NbD7aZHcioUcGwlXrjKw/JxAQ9Q=09/01/2018 11:19:4609/01/2018 11:15:17</TimeStamp>
+        <ID>
+          <String>Dim Radni Nalog</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>1B1y4ioBpuIbVFXpZsAmnzfhU+U=09/01/2018 11:19:4609/01/2018 11:15:17</TimeStamp>
+        <ID>
+          <String>Dim Vrijeme</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>aWcziGnrLoNd5Ghme62GZFIUbSw=09/01/2018 11:19:4609/01/2018 11:15:17</TimeStamp>
+        <ID>
+          <String>Dim Putni Nalog</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>EYMgS89+leMOnoJZXow8Sij9Z04=09/01/2018 11:19:4609/01/2018 11:15:17</TimeStamp>
+        <ID>
+          <String>Fact Zaposlenik Procesi</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>wRwJb/yZGwZoYmKKV3fG89AZnVA=09/01/2018 11:41:3509/01/2018 11:15:17P29xYV4zMe/hqfy2yh1XLbQSiIg=09/01/2018 11:15:1709/01/2018 11:15:17</TimeStamp>
+        <ID>
+          <String>Armin Mostar Construct DW</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>izknPfDqrstbJq9165YliCtrtxI=09/01/2018 11:09:2909/01/2018 11:09:29</TimeStamp>
+      <ID>
+        <String>KockaPodataka</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2018-01-09T10:41:42.556667Z</LastDeployed>
+</DeploymentSnapshot>

@@ -1,0 +1,949 @@
+{
+  "name": "SemanticModel",
+  "compatibilityLevel": 1200,
+  "model": {
+    "culture": "en-GB",
+    "dataSources": [
+      {
+        "name": "SqlServer local MostarConstruct",
+        "connectionString": "Provider=SQLNCLI11;Data Source=(local);Initial Catalog=MostarConstruct;Integrated Security=SSPI;Persist Security Info=false",
+        "impersonationMode": "impersonateAccount",
+        "account": "HOME",
+        "annotations": [
+          {
+            "name": "ConnectionEditUISource",
+            "value": "SqlServer"
+          }
+        ]
+      }
+    ],
+    "tables": [
+      {
+        "name": "Drzave",
+        "columns": [
+          {
+            "name": "DrzavaID",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "DrzavaID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Naziv",
+            "dataType": "string",
+            "sourceColumn": "Naziv",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Oznaka",
+            "dataType": "string",
+            "sourceColumn": "Oznaka",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Drzave",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [dbo].[Drzave].* FROM [dbo].[Drzave] ",
+              "dataSource": "SqlServer local MostarConstruct"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Drzave].* FROM [dbo].[Drzave] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Drzave"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Gradovi",
+        "columns": [
+          {
+            "name": "GradID",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "GradID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Naziv",
+            "dataType": "string",
+            "sourceColumn": "Naziv",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "PostanskiBroj",
+            "dataType": "int64",
+            "sourceColumn": "PostanskiBroj",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "KantonID",
+            "dataType": "int64",
+            "sourceColumn": "KantonID",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Gradovi",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [dbo].[Gradovi].* FROM [dbo].[Gradovi] ",
+              "dataSource": "SqlServer local MostarConstruct"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Gradovi].* FROM [dbo].[Gradovi] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Gradovi"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Kantoni",
+        "columns": [
+          {
+            "name": "KantonID",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "KantonID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Naziv",
+            "dataType": "string",
+            "sourceColumn": "Naziv",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "DrzavaID",
+            "dataType": "int64",
+            "sourceColumn": "DrzavaID",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Kantoni",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [dbo].[Kantoni].* FROM [dbo].[Kantoni] ",
+              "dataSource": "SqlServer local MostarConstruct"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Kantoni].* FROM [dbo].[Kantoni] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Kantoni"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Plate",
+        "columns": [
+          {
+            "name": "PlataID",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "PlataID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Neto",
+            "dataType": "double",
+            "sourceColumn": "Neto",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "Bruto",
+            "dataType": "double",
+            "sourceColumn": "Bruto",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "Mjesec",
+            "dataType": "int64",
+            "sourceColumn": "Mjesec",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "PrimateljID",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "PrimateljID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ProcesiraoID",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "ProcesiraoID",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Plate",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [dbo].[Plate].* FROM [dbo].[Plate] ",
+              "dataSource": "SqlServer local MostarConstruct"
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "SumBruto",
+            "expression": "SUM((Plate[Bruto]))"
+          },
+          {
+            "name": "SumNeto",
+            "expression": "sum(Plate[Neto])"
+          },
+          {
+            "name": "Prosječna bruto plata",
+            "expression": "AVERAGE(Plate[Bruto])"
+          },
+          {
+            "name": "Prosječna neto plata",
+            "expression": "AVERAGE(Plate[Neto])"
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Plate].* FROM [dbo].[Plate] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Plate"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Pozicije",
+        "columns": [
+          {
+            "name": "PozicijaID",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "PozicijaID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Naziv",
+            "dataType": "string",
+            "sourceColumn": "Naziv",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Pozicije",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [dbo].[Pozicije].* FROM [dbo].[Pozicije] ",
+              "dataSource": "SqlServer local MostarConstruct"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Pozicije].* FROM [dbo].[Pozicije] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Pozicije"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Projekti",
+        "columns": [
+          {
+            "name": "ProjekatID",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "ProjekatID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Naziv",
+            "dataType": "string",
+            "sourceColumn": "Naziv",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "DatumPocetka",
+            "dataType": "dateTime",
+            "sourceColumn": "DatumPocetka",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "OcekivaniDatumZavrsetka",
+            "dataType": "dateTime",
+            "sourceColumn": "OcekivaniDatumZavrsetka",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "Vrijednost",
+            "dataType": "double",
+            "sourceColumn": "Vrijednost",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "NadzorniOrgan",
+            "dataType": "string",
+            "sourceColumn": "NadzorniOrgan",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "InvestitorID",
+            "dataType": "int64",
+            "sourceColumn": "InvestitorID",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Projekti",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [dbo].[Projekti].* FROM [dbo].[Projekti] ",
+              "dataSource": "SqlServer local MostarConstruct"
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Ukupna vrijednost projekata",
+            "expression": "SUM(Projekti[Vrijednost])"
+          },
+          {
+            "name": "Prosjecna vrijednost projekta",
+            "expression": "AVERAGE(Projekti[Vrijednost])"
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Projekti].* FROM [dbo].[Projekti] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Projekti"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "PutniNalozi",
+        "columns": [
+          {
+            "name": "NalogID",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "NalogID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ZaposlenikID",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "ZaposlenikID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "VoziloID",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "VoziloID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "GradID",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "GradID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Svrha",
+            "dataType": "string",
+            "sourceColumn": "Svrha",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "TroskoviPutovanja",
+            "dataType": "double",
+            "sourceColumn": "TroskoviPutovanja",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "UkupnoRadnihSati",
+            "dataType": "double",
+            "sourceColumn": "UkupnoRadnihSati",
+            "sourceProviderType": "Numeric"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "PutniNalozi",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [dbo].[PutniNalozi].* FROM [dbo].[PutniNalozi] ",
+              "dataSource": "SqlServer local MostarConstruct"
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Ukupni troškovi putovanja",
+            "expression": "SUM(PutniNalozi[TroskoviPutovanja])"
+          },
+          {
+            "name": "Prosječni troškovi putovanja",
+            "expression": "AVERAGE(PutniNalozi[TroskoviPutovanja])",
+            "kpi": {
+              "targetExpression": "'PutniNalozi'[Ukupni troškovi putovanja]",
+              "statusGraphic": "Traffic Light - Single",
+              "statusExpression": [
+                "var x='PutniNalozi'[Prosječni troškovi putovanja]/'PutniNalozi'[_Prosječni troškovi putovanja Goal] return",
+                "            if(ISBLANK(x),BLANK(),",
+                "                    If(x<0.15,1,",
+                "\t                If(x<0.5,0,-1)",
+                "                )",
+                "            )",
+                "            "
+              ],
+              "annotations": [
+                {
+                  "name": "GoalType",
+                  "value": "Measure"
+                },
+                {
+                  "name": "KpiStatusType",
+                  "value": "LinearReversed"
+                },
+                {
+                  "name": "KpiThresholdType",
+                  "value": "Percentage"
+                },
+                {
+                  "name": "KpiThresholdOrdering",
+                  "value": "Ascending"
+                },
+                {
+                  "name": "KpiThresholdCount",
+                  "value": "2"
+                },
+                {
+                  "name": "KpiThreshold_0",
+                  "value": "15"
+                },
+                {
+                  "name": "KpiThreshold_1",
+                  "value": "50"
+                }
+              ]
+            }
+          },
+          {
+            "name": "Ukupno radnih sati",
+            "expression": "INT(SUM(PutniNalozi[UkupnoRadnihSati]))"
+          },
+          {
+            "name": "Prosječno radnih sati",
+            "expression": "AVERAGE(PutniNalozi[UkupnoRadnihSati])",
+            "kpi": {
+              "targetExpression": "10",
+              "statusGraphic": "Traffic Light - Single",
+              "statusExpression": [
+                "var x='PutniNalozi'[Prosječno radnih sati] return",
+                "            if(ISBLANK(x),BLANK(),",
+                "                    If(x<6.5,1,",
+                "\t                If(x<8,0,-1)",
+                "                )",
+                "            )",
+                "            "
+              ],
+              "annotations": [
+                {
+                  "name": "GoalType",
+                  "value": "StaticValue"
+                },
+                {
+                  "name": "KpiStatusType",
+                  "value": "LinearReversed"
+                },
+                {
+                  "name": "KpiThresholdType",
+                  "value": "Absolute"
+                },
+                {
+                  "name": "KpiThresholdOrdering",
+                  "value": "Ascending"
+                },
+                {
+                  "name": "KpiThresholdCount",
+                  "value": "2"
+                },
+                {
+                  "name": "KpiThreshold_0",
+                  "value": "6.5"
+                },
+                {
+                  "name": "KpiThreshold_1",
+                  "value": "8"
+                }
+              ]
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[PutniNalozi].* FROM [dbo].[PutniNalozi] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "PutniNalozi"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Radilista",
+        "columns": [
+          {
+            "name": "RadilisteID",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "RadilisteID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Naziv",
+            "dataType": "string",
+            "sourceColumn": "Naziv",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "DatumPocetka",
+            "dataType": "dateTime",
+            "sourceColumn": "DatumPocetka",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "ProjekatID",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "ProjekatID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "GradID",
+            "dataType": "int64",
+            "sourceColumn": "GradID",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Radilista",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [dbo].[Radilista].* FROM [dbo].[Radilista] ",
+              "dataSource": "SqlServer local MostarConstruct"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Radilista].* FROM [dbo].[Radilista] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Radilista"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "RadniNalog",
+        "columns": [
+          {
+            "name": "RadniNalogID",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "RadniNalogID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ZaposlenikID",
+            "dataType": "int64",
+            "sourceColumn": "ZaposlenikID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "RadilisteID",
+            "dataType": "int64",
+            "sourceColumn": "RadilisteID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "DatumDodjele",
+            "dataType": "dateTime",
+            "sourceColumn": "DatumDodjele",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "OpisZaduzenja",
+            "dataType": "string",
+            "sourceColumn": "OpisZaduzenja",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "TrajanjeSati",
+            "dataType": "int64",
+            "sourceColumn": "TrajanjeSati",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Napomena",
+            "dataType": "string",
+            "sourceColumn": "Napomena",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "RadniNalog",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [dbo].[RadniNalog].* FROM [dbo].[RadniNalog] ",
+              "dataSource": "SqlServer local MostarConstruct"
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Ukupno sati trajanja radnih naloga",
+            "expression": "SUM(RadniNalog[TrajanjeSati])"
+          },
+          {
+            "name": "Prosječn sati po radnom nalogu",
+            "expression": "AVERAGE(RadniNalog[TrajanjeSati])"
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[RadniNalog].* FROM [dbo].[RadniNalog] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "RadniNalog"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Uplate",
+        "columns": [
+          {
+            "name": "UplataID",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "UplataID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ProjekatID",
+            "dataType": "int64",
+            "sourceColumn": "ProjekatID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "DatumUplate",
+            "dataType": "dateTime",
+            "sourceColumn": "DatumUplate",
+            "formatString": "General Date",
+            "sourceProviderType": "DBDate"
+          },
+          {
+            "name": "Iznos",
+            "dataType": "double",
+            "sourceColumn": "Iznos",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "InvestitorID",
+            "dataType": "int64",
+            "sourceColumn": "InvestitorID",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Uplate",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [dbo].[Uplate].* FROM [dbo].[Uplate] ",
+              "dataSource": "SqlServer local MostarConstruct"
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Ukupan uplaćen iznos",
+            "expression": "SUM(Uplate[Iznos])"
+          },
+          {
+            "name": "Prosječno uplaćivan iznos",
+            "expression": "AVERAGE(Uplate[Iznos])"
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Uplate].* FROM [dbo].[Uplate] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Uplate"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "Zaposlenici",
+        "columns": [
+          {
+            "name": "ZaposlenikID",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "ZaposlenikID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Ime",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "Ime",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "Prezime",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "Prezime",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "PozicijaID",
+            "dataType": "int64",
+            "sourceColumn": "PozicijaID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "GradID",
+            "dataType": "int64",
+            "sourceColumn": "GradID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "type": "calculated",
+            "name": "Ime i prezime",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "[Ime] & \" \" & [Prezime]"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Zaposlenici",
+            "dataView": "full",
+            "source": {
+              "query": " SELECT [dbo].[Zaposlenici].* FROM [dbo].[Zaposlenici] ",
+              "dataSource": "SqlServer local MostarConstruct"
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Ukupno zaposlenika",
+            "expression": "COUNT(Zaposlenici[ZaposlenikID])"
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[Zaposlenici].* FROM [dbo].[Zaposlenici] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Zaposlenici"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "3223a3c8-15f4-419c-97af-2c7d7deb987e",
+        "fromTable": "Gradovi",
+        "fromColumn": "KantonID",
+        "toTable": "Kantoni",
+        "toColumn": "KantonID"
+      },
+      {
+        "name": "1915ef93-3097-4012-9359-68bdbe96de81",
+        "fromTable": "Kantoni",
+        "fromColumn": "DrzavaID",
+        "toTable": "Drzave",
+        "toColumn": "DrzavaID"
+      },
+      {
+        "name": "5604affe-a41e-4cf7-b339-c7453946316a",
+        "fromTable": "Radilista",
+        "fromColumn": "ProjekatID",
+        "toTable": "Projekti",
+        "toColumn": "ProjekatID"
+      },
+      {
+        "name": "95ec9ba0-67d2-42bf-a13f-6a28aa659ae9",
+        "fromTable": "RadniNalog",
+        "fromColumn": "RadilisteID",
+        "toTable": "Radilista",
+        "toColumn": "RadilisteID"
+      },
+      {
+        "name": "0eed511b-be2f-4abf-8ecd-bd7672898009",
+        "fromTable": "Uplate",
+        "fromColumn": "ProjekatID",
+        "toTable": "Projekti",
+        "toColumn": "ProjekatID"
+      },
+      {
+        "name": "1e366aa5-b202-4c88-a611-4b51b1611da3",
+        "fromTable": "Zaposlenici",
+        "fromColumn": "PozicijaID",
+        "toTable": "Pozicije",
+        "toColumn": "PozicijaID"
+      },
+      {
+        "name": "ea07d26d-bc77-42f4-b945-b3929670322d",
+        "fromTable": "PutniNalozi",
+        "fromColumn": "ZaposlenikID",
+        "toTable": "Zaposlenici",
+        "toColumn": "ZaposlenikID"
+      },
+      {
+        "name": "8b006b1e-bef3-4ca1-92d0-063578c5f828",
+        "fromTable": "RadniNalog",
+        "fromColumn": "ZaposlenikID",
+        "toTable": "Zaposlenici",
+        "toColumn": "ZaposlenikID"
+      },
+      {
+        "name": "5f491c92-648d-4281-9100-30c74e2bbdf2",
+        "fromTable": "Plate",
+        "fromColumn": "PrimateljID",
+        "toTable": "Zaposlenici",
+        "toColumn": "ZaposlenikID"
+      },
+      {
+        "name": "3b707542-cf7f-4d11-a3b9-ffda2f568447",
+        "fromTable": "Zaposlenici",
+        "fromColumn": "GradID",
+        "toTable": "Gradovi",
+        "toColumn": "GradID",
+        "isActive": false
+      },
+      {
+        "name": "a406482d-9d18-4257-850b-d13f17124977",
+        "fromTable": "PutniNalozi",
+        "fromColumn": "GradID",
+        "toTable": "Gradovi",
+        "toColumn": "GradID"
+      },
+      {
+        "name": "3ca4eb97-f9d5-4e8a-955d-0f8d32e65b63",
+        "fromTable": "Radilista",
+        "fromColumn": "GradID",
+        "toTable": "Gradovi",
+        "toColumn": "GradID"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "ClientCompatibilityLevel",
+        "value": "400"
+      }
+    ]
+  },
+  "id": "SemanticModel"
+}
