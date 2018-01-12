@@ -11,6 +11,8 @@ Project("{6870E480-7721-4708-BFB8-9AE898AA21B3}") = "Tabular", "Tabular\Tabular.
 EndProject
 Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Reporti", "Reporti\Reporti.rptproj", "{18A1B538-36DB-4692-A474-BF1A49361FC7}"
 EndProject
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "DataMiningRadniNalozi", "DataMiningRadniNalozi\DataMiningRadniNalozi.dwproj", "{6461D87D-86DD-4582-939C-04593202019D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -61,6 +63,18 @@ Global
 		{18A1B538-36DB-4692-A474-BF1A49361FC7}.Release|x86.ActiveCfg = Release
 		{18A1B538-36DB-4692-A474-BF1A49361FC7}.Release|x86.Build.0 = Release
 		{18A1B538-36DB-4692-A474-BF1A49361FC7}.Release|x86.Deploy.0 = Release
+		{6461D87D-86DD-4582-939C-04593202019D}.Debug|x86.ActiveCfg = Development
+		{6461D87D-86DD-4582-939C-04593202019D}.Debug|x86.Build.0 = Development
+		{6461D87D-86DD-4582-939C-04593202019D}.Debug|x86.Deploy.0 = Development
+		{6461D87D-86DD-4582-939C-04593202019D}.DebugLocal|x86.ActiveCfg = Development
+		{6461D87D-86DD-4582-939C-04593202019D}.DebugLocal|x86.Build.0 = Development
+		{6461D87D-86DD-4582-939C-04593202019D}.DebugLocal|x86.Deploy.0 = Development
+		{6461D87D-86DD-4582-939C-04593202019D}.Development|x86.ActiveCfg = Development
+		{6461D87D-86DD-4582-939C-04593202019D}.Development|x86.Build.0 = Development
+		{6461D87D-86DD-4582-939C-04593202019D}.Development|x86.Deploy.0 = Development
+		{6461D87D-86DD-4582-939C-04593202019D}.Release|x86.ActiveCfg = Development
+		{6461D87D-86DD-4582-939C-04593202019D}.Release|x86.Build.0 = Development
+		{6461D87D-86DD-4582-939C-04593202019D}.Release|x86.Deploy.0 = Development
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
